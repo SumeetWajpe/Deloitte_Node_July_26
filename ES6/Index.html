@@ -33,9 +33,18 @@
       //   console.log(x);
       //   let x = 100;
 
-      const player = { name: "Alcaraz", age: 20, country: "Spain" };
-      player.name = "Carlos Alcaraz"; // allowed
-      player = { name: "Sinner" };
+      //   const player = { name: "Alcaraz", age: 20, country: "Spain" };
+      //   player.name = "Carlos Alcaraz"; // allowed
+      //   player = { name: "Sinner" };
+
+      // Spread Operator - Arrays & Objects
+      let cars = ["BMW", "Audi", "Mercedes"];
+      let moreCars = ["Porsche", "Ferrari"];
+      let allCars = [...cars, ...moreCars, "Audi"];
+
+      // Spread Operator with Objects
+      let person = { name: "Carloz", age: 20, country: "Spain" };
+      let player = { age: 22, ...person, sport: " Tennis" };
     </script>
   </head>
   <body></body>
