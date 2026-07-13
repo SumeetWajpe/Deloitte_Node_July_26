@@ -38,13 +38,22 @@
       //   player = { name: "Sinner" };
 
       // Spread Operator - Arrays & Objects
-      let cars = ["BMW", "Audi", "Mercedes"];
-      let moreCars = ["Porsche", "Ferrari"];
-      let allCars = [...cars, ...moreCars, "Audi"];
+      //   let cars = ["BMW", "Audi", "Mercedes"];
+      //   let moreCars = ["Porsche", "Ferrari"];
+      //   let allCars = [...cars, ...moreCars, "Audi"];
 
       // Spread Operator with Objects
-      let person = { name: "Carloz", age: 20, country: "Spain" };
-      let player = { age: 22, ...person, sport: " Tennis" };
+      //   let person = { name: "Carloz", age: 20, country: "Spain" };
+      //   let player = { ...person, sport: " Tennis", age: 22 };
+
+      // Destructuring - Arrays & Objects
+
+      let cars = ["BMW", "Audi", "Mercedes"];
+      //   let firstCar = cars[0];
+      //   let secondCar = cars[1];
+      //   let thirdCar = cars[2];
+
+      let [firstCar, secondCar, thirdCar] = cars;
     </script>
   </head>
   <body></body>
