@@ -48,19 +48,35 @@
 
       // Destructuring - Arrays & Objects
 
-      let cars = ["BMW", "Audi", "Mercedes"];
+      //   let cars = ["BMW", "Audi", "Mercedes"];
       //   let firstCar = cars[0];
       //   let secondCar = cars[1];
       //   let thirdCar = cars[2];
 
-      let [firstCar, secondCar, thirdCar, fourthCar = "Ferrari"] = cars;
+      //   let [firstCar, secondCar, thirdCar, fourthCar = "Ferrari"] = cars;
 
       // With Objects
-      let person = { pname: "Carloz", age: 20, country: "Spain" };
+      //   let person = { pname: "Carloz", age: 20, country: "Spain" };
       //   let pname = person.pname;
       //   let age = person.age;
       //   let country = person.country;
-      let { age, pname: Name, lname = "Alcaraz" } = person;
+      //   let { age, pname: Name, lname = "Alcaraz" } = person;
+
+      // Working with Nested Objects
+      let player = {
+        name: "Alcaraz",
+        age: 20,
+        country: "Spain",
+        stats: {
+          matches: 100,
+          wins: 80,
+          losses: 20,
+        },
+      };
+
+      let {
+        stats: { wins },
+      } = player;
     </script>
   </head>
   <body></body>
