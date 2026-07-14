@@ -77,9 +77,16 @@
       let {
         stats: { wins },
       } = player;
-      
 
-      
+      // Functions
+
+      // Default Parameters
+      function PrintBook(author = "Unknown", title = "Unknown", publisher) {
+        console.log(author, title, publisher);
+      }
+
+      PrintBook();
+      PrintBook("Dr. APJ Abdul Kalam", "Wings of fire", "Printwell");
     </script>
   </head>
   <body></body>
