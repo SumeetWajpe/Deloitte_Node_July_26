@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Car {
+        // name = "BMW";
+        // speed = 200;
+        constructor(name = "BMW", speed = 200) {
+          this.name = name;
+          this.speed = speed;
+        }
+
+        accelerate() {
+          return "VRRRROOOOMMMMMMM..";
+        }
+      }
+
+      let carObj = new Car();
+      console.log(carObj.accelerate());
+    </script>
+  </head>
+  <body></body>
+</html>
