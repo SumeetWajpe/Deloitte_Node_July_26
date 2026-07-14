@@ -81,12 +81,20 @@
       // Functions
 
       // Default Parameters
-      function PrintBook(author = "Unknown", title = "Unknown", publisher) {
-        console.log(author, title, publisher);
+      // function PrintBook(author = "Unknown", title = "Unknown", publisher) {
+      //   console.log(author, title, publisher);
+      // }
+
+      // PrintBook();
+      // PrintBook("Dr. APJ Abdul Kalam", "Wings of fire", "Printwell");
+
+      // rest Parameters
+
+      function PrintBook(author, ...titles) {
+        console.log(author, titles);
       }
 
-      PrintBook();
-      PrintBook("Dr. APJ Abdul Kalam", "Wings of fire", "Printwell");
+      PrintBook("Dr. APJ Abdul Kalam", "Wings of fire", "Ignited Minds");
     </script>
   </head>
   <body></body>
