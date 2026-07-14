@@ -23,13 +23,23 @@
       //   console.log("The addition is " + Add(20, 30));
 
       // New Way -  ES 6 - Arrow function
-    //   var Add = (x, y) => {
-    //     return x + y;
-    //   };
+      //   var Add = (x, y) => {
+      //     return x + y;
+      //   };
 
       // OR
       var Add = (x, y) => x + y;
       console.log("The addition is " + Add(20, 30));
+
+      function Emp() {
+        this.salary = 2000000;
+        // var _this = this;
+        setTimeout(() => {
+          console.log(this.salary);
+        }, 2000);
+      }
+
+      var e = new Emp();
     </script>
   </head>
   <body></body>
