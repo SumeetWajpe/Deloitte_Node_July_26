@@ -15,7 +15,7 @@
 // module.exports.Product = Multiply;
 
 // ES6
-export function Add(x, y) {
+export default function Add(x, y) {
   return x + y;
 }
 
