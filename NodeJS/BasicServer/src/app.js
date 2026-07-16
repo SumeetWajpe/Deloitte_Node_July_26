@@ -1,9 +1,16 @@
 // server.mjs
 import { createServer } from "node:http";
+import fs from "node:fs";
 
 const server = createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.end("<h1>Hello World!</h1>");
+  fs.readFile("src/Index.html", (err, data) => {
+    if (err) {
+      console.log(err.message);
+    } else {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(data);
+    }
+  });
 });
 
 // starts a simple http server locally on port 3000
