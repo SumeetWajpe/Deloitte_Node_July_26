@@ -8,7 +8,13 @@ function GetCount(maxIteration) {
     evt.emit("start");
     let cnt = 0;
     while (cnt < maxIteration) {
+    //   if (cnt == 5) {
+    //     evt.emit("error", cnt);
+    //     break;
+    //   }
+
       evt.emit("data", cnt++);
+      // cnt == maxIteration -> emit end
     }
   });
 
@@ -25,4 +31,11 @@ e.on("start", () => {
 e.on("data", count => {
   console.log(count);
 });
+
+e.on("error", cnt => {
+  console.log("Iteration eneded with error : " + cnt);
+});
 console.log("Ended..");
+
+// error ->
+// end ->
