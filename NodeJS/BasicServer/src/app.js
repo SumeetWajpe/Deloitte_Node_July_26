@@ -31,6 +31,13 @@ const server = createServer((req, res) => {
       console.log(err.message);
     });
     readableStream.pipe(res);
+  } else if (req.url == "/products") {
+    var products = [
+      { id: 1, title: "MacBookPro" },
+      { id: 2, title: "LED TV" },
+    ];
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(products));
   }
 });
 
