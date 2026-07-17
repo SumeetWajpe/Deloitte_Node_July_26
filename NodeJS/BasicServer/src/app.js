@@ -13,8 +13,7 @@ const server = createServer((req, res) => {
         res.end(data);
       }
     });
-  }
-  if (req.url == "/styles.css") {
+  } else if (req.url == "/styles.css") {
     fs.readFile("src/styles.css", (err, data) => {
       if (err) {
         console.log(err.message);
@@ -23,6 +22,15 @@ const server = createServer((req, res) => {
         res.end(data);
       }
     });
+  } else if (req.url == "/script.js") {
+    const readableStream = fs.createReadStream("src/script.js", {
+      encoding: "utf-8",
+    });
+    res.writeHead(200, { "Content-Type": "text/javascript" });
+    readableStream.on("error", err => {
+      console.log(err.message);
+    });
+    readableStream.pipe(res);
   }
 });
 
