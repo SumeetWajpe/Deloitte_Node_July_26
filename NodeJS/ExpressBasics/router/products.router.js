@@ -9,6 +9,12 @@ var products = [
 router.get("/products", (req, res) => {
   res.json(products);
 });
+
+router.get("/gethtml", (req, res) => {
+  // render
+  res.render("index");
+});
+
 router.get("/productdetails/:pid", (req, res) => {
   const pid = req.params.pid;
   let theProduct = products.find(p => p.id == pid);

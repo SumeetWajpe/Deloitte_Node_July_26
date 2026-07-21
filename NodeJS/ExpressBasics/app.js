@@ -8,6 +8,10 @@ app.use(express.static("src/static"));
 app.use(express.json());
 app.use("/", productsRouter);
 
+// view engine
+app.set("view engine", "pug");
+app.set("views", "./src/views");
+
 // register an endpoint for GEt verb with path as /
 app.get("/", (req, res) => {
   // res.send("<h1>Hello World!</h1>");

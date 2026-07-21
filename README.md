@@ -9,7 +9,7 @@ https://www.jsv9000.app/
 Create a new app Deldemy.
 - 5 Courses -> {id,title,rating,likes,imageUrl}
     - router -> coursesRouter
-        - get - 5 course
-        - post - add new course
-        - delete - delete the course
+        - get - 5 courses  (/courses)
+        - post - add new course  (/newcourse)
+        - delete - delete the course (/courses/1)
     
