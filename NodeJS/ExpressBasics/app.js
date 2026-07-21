@@ -5,7 +5,8 @@ const port = 3000;
 
 // middlewares
 app.use(express.static("src/static"));
-app.use("/products", productsRouter);
+app.use(express.json());
+app.use("/", productsRouter);
 
 // register an endpoint for GEt verb with path as /
 app.get("/", (req, res) => {
