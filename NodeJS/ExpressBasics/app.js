@@ -1,9 +1,11 @@
 const express = require("express");
+const productsRouter = require("./router/products.router.js");
 const app = express();
 const port = 3000;
 
 // middlewares
 app.use(express.static("src/static"));
+app.use("/products", productsRouter);
 
 // register an endpoint for GEt verb with path as /
 app.get("/", (req, res) => {
