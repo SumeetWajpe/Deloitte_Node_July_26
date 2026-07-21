@@ -12,7 +12,10 @@ router.get("/products", (req, res) => {
 
 router.get("/gethtml", (req, res) => {
   // render
-  res.render("index");
+  res.render("index", {
+    title: "Using Pug !",
+    heading: "This is displayed using Pug  !",
+  });
 });
 
 router.get("/productdetails/:pid", (req, res) => {
