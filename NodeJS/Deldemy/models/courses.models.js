@@ -13,7 +13,7 @@ var courses = [
     trainer: "Jack Well",
 
     imageUrl:
-      "https://www.loginradius.com/blog/static/00a89fc56461ea1529439d89072c93f1/701ee/react.jpg",
+      "https://framerusercontent.com/images/N0xefN2fE6CCF4G2YhAg5exTHX8.png?width=1200&height=800",
 
     description:
       "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies.React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies.",
@@ -33,7 +33,7 @@ var courses = [
     trainer: "John Jacob",
 
     imageUrl:
-      "https://negativeepsilon.com/media/attachments/blobs/2023/01/09/PNbZQxCiPVkNWzDNPDx24j_redux_rm05scp.png_riwC4kc5pLH7k1e5ReNajv_2FOQ.webp",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSm0kX9ueuge4cLawcTFWfSZ8yNIRlZCLI5M0v-07Zwu3NcPsZHUtS6bKr&s=10",
 
     description:
       "Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark. ",
@@ -72,8 +72,7 @@ var courses = [
 
     trainer: "Matthew Bell",
 
-    imageUrl:
-      "https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2019/03/angular-blog.png?fit=1600%2C795&ssl=1",
+    imageUrl: "https://img-c.udemycdn.com/course/480x270/756150_c033_4.jpg",
 
     description:
       "Angular is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.",
