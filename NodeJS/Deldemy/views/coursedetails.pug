@@ -1,0 +1,9 @@
+extends layout 
+block content 
+    h1 Course details for #{theCourse.id}
+    div(class="row")
+        div(class="col-md-9")
+            img(src=theCourse.imageUrl width="100%")
+        div(class="col-md-3")
+            h2= theCourse.title 
+            p Rs. #{theCourse.price}
