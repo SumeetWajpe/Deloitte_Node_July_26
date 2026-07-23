@@ -28,6 +28,7 @@ router.post("/newproduct", (req, res) => {
   console.log(req.body);
   let newproduct = req.body;
   products.push(newproduct);
+  // SQL / MongoDB 
   console.log("Adding a new Product !");
   res.send("New product added successfully !");
 });
