@@ -1,6 +1,14 @@
+const pool = require("../db/connection.js");
+
 async function createCourse(course) {}
 
-async function getAllCourses() {}
+async function getAllCourses() {
+  // connection & query
+  const [rows] = await pool.query("SELECT * FROM courses ORDER BY id");
+
+  // return resultset
+  return rows;
+}
 
 async function getCourseById(id) {}
 
