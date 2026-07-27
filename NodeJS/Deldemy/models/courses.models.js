@@ -1,101 +1,17 @@
-var courses = [
-  {
-    id: "1",
+function createCourse(course) {}
 
-    title: "React",
+function getAllCourses() {}
 
-    price: 5000,
+function getCourseById(id) {}
 
-    likes: 400,
+function updateCourse(id, course) {}
 
-    rating: 5,
+function deleteCourse(id) {}
 
-    trainer: "Jack Well",
-
-    imageUrl:
-      "https://framerusercontent.com/images/N0xefN2fE6CCF4G2YhAg5exTHX8.png?width=1200&height=800",
-
-    description:
-      "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies.React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies.",
-  },
-
-  {
-    id: "2",
-
-    title: "Redux",
-
-    price: 4000,
-
-    likes: 600,
-
-    rating: 5,
-
-    trainer: "John Jacob",
-
-    imageUrl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSm0kX9ueuge4cLawcTFWfSZ8yNIRlZCLI5M0v-07Zwu3NcPsZHUtS6bKr&s=10",
-
-    description:
-      "Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark. ",
-  },
-
-  {
-    id: "3",
-
-    title: "Node",
-
-    price: 6000,
-
-    likes: 900,
-
-    rating: 4,
-
-    trainer: "Bishop Renny",
-
-    imageUrl:
-      "https://blog.logrocket.com/wp-content/uploads/2022/10/Building-simple-login-form-node-js.png",
-
-    description:
-      "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.",
-  },
-
-  {
-    id: "4",
-
-    title: "Angular",
-
-    price: 5000,
-
-    likes: 200,
-
-    rating: 3,
-
-    trainer: "Matthew Bell",
-
-    imageUrl: "https://img-c.udemycdn.com/course/480x270/756150_c033_4.jpg",
-
-    description:
-      "Angular is a TypeScript-based, free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.",
-  },
-
-  {
-    id: "5",
-
-    title: "Flutter",
-
-    price: 7000,
-
-    likes: 700,
-
-    rating: 4,
-
-    trainer: "Jenny Alter",
-
-    imageUrl: "https://miro.medium.com/max/2000/1*PCKC8Ufml-wvb9Vjj3aaWw.jpeg",
-
-    description:
-      "Flutter is an open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase. First described in 2015, Flutter was released in May 2017. ",
-  },
-];
-
-module.exports = courses;
+module.exports = {
+  createCourse,
+  getAllCourses,
+  getCourseById,
+  updateCourse,
+  deleteCourse,
+};
