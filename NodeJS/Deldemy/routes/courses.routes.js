@@ -6,6 +6,7 @@ const fs = require("fs");
 
 router.get("/courses", (req, res) => {
   // Get data from DB
+ 
   res.json(courses);
 });
 
