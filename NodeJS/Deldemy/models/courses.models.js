@@ -1,12 +1,12 @@
-function createCourse(course) {}
+async function createCourse(course) {}
 
-function getAllCourses() {}
+async function getAllCourses() {}
 
-function getCourseById(id) {}
+async function getCourseById(id) {}
 
-function updateCourse(id, course) {}
+async function updateCourse(id, course) {}
 
-function deleteCourse(id) {}
+async function deleteCourse(id) {}
 
 module.exports = {
   createCourse,

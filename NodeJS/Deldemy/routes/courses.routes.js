@@ -1,13 +1,17 @@
 const express = require("express");
 const router = express.Router();
-const courses = require("../models/courses.models.js");
+const coursesModel = require("../models/courses.models.js");
 const path = require("path");
 const fs = require("fs");
 
-router.get("/courses", (req, res) => {
+router.get("/courses", async (req, res) => {
   // Get data from DB
- 
-  res.json(courses);
+  try {
+    const courses = await coursesModel.getAllCourses();
+    res.json(courses);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 router.get("/coursedetails/:id", (req, res) => {
