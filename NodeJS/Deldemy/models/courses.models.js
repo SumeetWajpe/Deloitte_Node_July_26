@@ -10,7 +10,10 @@ async function getAllCourses() {
   return rows;
 }
 
-async function getCourseById(id) {}
+async function getCourseById(id) {
+  const [rows] = await pool.query("SELECT * FROM courses WHERE id = ?", [id]);
+  return rows[0];
+}
 
 async function updateCourse(id, course) {}
 

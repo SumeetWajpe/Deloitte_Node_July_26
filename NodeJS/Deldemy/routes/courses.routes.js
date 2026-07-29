@@ -11,15 +11,22 @@ router.get("/courses", async (req, res) => {
     res.json(courses);
   } catch (err) {
     console.log(err);
+    res.status(500).json({ error: "Failed to fetch courses" });
   }
 });
 
-router.get("/coursedetails/:id", (req, res) => {
-  // Get data from DB
-  let courseId = req.params.id;
-  let theCourse = courses.find(c => c.id == courseId);
-  // html
-  res.render("coursedetails", { title: "Course Details", theCourse });
+router.get("/coursedetails/:id", async (req, res) => {
+  try {
+    let courseId = +req.params.id;
+    console.log(courseId);
+    // Get data from DB
+    const theCourse = await coursesModel.getCourseById(courseId);
+    console.log(theCourse);
+    if (!theCourse) return res.status(404).send("Course not found !");
+
+    // html
+    res.render("coursedetails", { title: "Course Details", theCourse });
+  } catch (error) {}
 });
 
 router.post("/newcourse", (req, res) => {
