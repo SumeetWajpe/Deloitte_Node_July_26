@@ -17,7 +17,13 @@ async function getCourseById(id) {
 
 async function updateCourse(id, course) {}
 
-async function deleteCourse(id) {}
+async function deleteCourse(id) {
+  const [result] = await pool.query(
+    "DELETE FROM courses WHERE id = ?",
+    [id],
+  );
+  return result.affectedRows > 0;
+}
 
 module.exports = {
   createCourse,

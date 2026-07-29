@@ -34,6 +34,17 @@ router.post("/newcourse", (req, res) => {
   // insert data in DB
 });
 
+router.delete("/courses/:id", async (req, res) => {
+  try {
+    const deleted = await coursesModel.deleteCourse(req.params.id);
+    if (!deleted) return res.status(404).json({ error: "Course not found !" });
+    res.status(204).end();
+  } catch (error) {
+    console.log(err);
+    res.status(500).json({ error: "Failed to delete course !" });
+  }
+});
+
 router.get("/video", (req, res) => {
   // access to video
   const videoPath = path.resolve(path.dirname(".") + "/videos", "bunny.mp4");
