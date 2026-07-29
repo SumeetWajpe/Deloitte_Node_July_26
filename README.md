@@ -12,4 +12,12 @@ Create a new app Deldemy.
         - get - 5 courses  (/courses)
         - post - add new course  (/newcourse)
         - delete - delete the course (/courses/1)
-    
+
+
+# DB interaction
+-> Create connection obj -> Open it
+-> Create Statement (SELECT)
+-> Execute the query
+-> Get the result set
+-> Have it served in the portable format
+-> Close the connection
