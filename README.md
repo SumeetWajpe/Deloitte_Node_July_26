@@ -21,3 +21,9 @@ Create a new app Deldemy.
 -> Get the result set
 -> Have it served in the portable format
 -> Close the connection
+
+
+// PUT  -> id, title, imageUrl...... (All properties) [Replacement of the existing object]
+// PATCH -> title changed (Only some properties have changed)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods

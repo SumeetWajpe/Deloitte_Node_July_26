@@ -1,11 +1,14 @@
 {
   "name": "deldemy",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon app.js",
+    "test": "echo \"No tests yet...\""
   },
   "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/functions-extensions-express": "^0.1.1-preview",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.6",
     "debug": "~2.6.9",
@@ -13,7 +16,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "mysql2": "^3.23.1",
+    "mysql2": "^3.23.2",
     "pug": "2.0.0-beta11"
-  }
+  },
+  "main": "src/{index.js,functions/*.js}"
 }

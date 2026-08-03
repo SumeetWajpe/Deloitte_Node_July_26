@@ -1,11 +1,33 @@
 // make ajax request - fetch api / axios  -> /courses -> console.log(course)
 
 async function FetchCourses() {
-  const res = await fetch("http://localhost:3000/courses");
-  let listofcourses = await res.json();
+  try {
+    const res = await fetch("http://localhost:3000/courses");
+    let listofcourses;
+    if (!res.ok) {
+      throw new Error("Something went wrong ");
+    } else {
+      listofcourses = await res.json();
+    }
 
-  for (const course of listofcourses) {
-    CreateCourseItem(course);
+    for (const course of listofcourses) {
+      CreateCourseItem(course);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function DeleteACourse(id) {
+  const res = await fetch("http://localhost:3000/courses/" + id, {
+    method: "DELETE",
+  });
+  if (!res.ok) {
+    throw new Error("Something went wrong ");
+  } else {
+    alert("Course deleted " + res.status);
+
+    // Manipulate the DOM to remove the element
   }
 }
 
@@ -22,6 +44,8 @@ function CreateCourseItem(course) {
     <p class="card-text"> ${course.rating}</p>
     <p class="card-text"> ${course.trainer}</p>
     <button class="btn btn-outline-primary">${course.likes}</button>
+    <button class="btn btn-outline-danger" onclick="DeleteACourse(${course.id})">Delete</button>
+
   </div>
 </div>`;
 
