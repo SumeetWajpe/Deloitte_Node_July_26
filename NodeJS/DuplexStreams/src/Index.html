@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      let socket = null;
+      function Initialize() {
+        socket = io.connect();
+        socket.on("msg_from_server_peer", dataFromServerPeer => {
+          console.log(dataFromServerPeer);
+        });
+      }
+
+      function SendMessage() {
+        let msgToBeSent = document.getElementById("txtMesssage").value;
+        socket.emit("msg_from_client_peer",msgToBeSent);
+      }
+      window.addEventListener("DOMContentLoaded", Initialize);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Using Websockets</h1>
+    </header>
+    <main>
+      <label>
+        Enter your message here :
+        <input type="text" id="txtMesssage" />
+        <input type="button" value="Send" onclick="SendMessage()" />
+      </label>
+    </main>
+  </body>
+</html>
