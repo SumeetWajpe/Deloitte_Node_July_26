@@ -4,6 +4,9 @@ const resolvers = {
     users: () => {
       return usersModel;
     },
+    user: (_, { id }) => {
+      return usersModel.find(u => u.id == id);
+    },
   },
 };
 export default resolvers;
