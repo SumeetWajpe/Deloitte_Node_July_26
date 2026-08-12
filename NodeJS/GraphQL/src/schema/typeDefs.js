@@ -4,13 +4,22 @@ type Query{
     user(id:ID!):User
 }
 
+type Mutation{
+    addUser(newUser:UserInput!):User
+}
+
 type User{
     id:ID
     name:String
     age:Int 
     email:String
 }
-
+input UserInput{
+    id:ID
+    name:String
+    age:Int 
+    email:String
+}
 
 `;
 

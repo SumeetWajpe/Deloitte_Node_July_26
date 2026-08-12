@@ -8,5 +8,12 @@ const resolvers = {
       return usersModel.find(u => u.id == id);
     },
   },
+  Mutation: {
+    addUser: (_, { newUser }) => {
+      let newUserToBeadded = newUser;
+      usersModel.push(newUserToBeadded);
+      return newUserToBeadded;
+    },
+  },
 };
 export default resolvers;
